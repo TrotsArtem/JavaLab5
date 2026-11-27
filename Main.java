@@ -30,8 +30,7 @@ public class Main {
 
         @Override
         public String toString() {
-            return String.format("%s: назва=%s, рік=%d, водотоннажність=%.1f т",
-                    getClass().getSimpleName(), name, year, displacement);
+            return String.format("%s: назва=%s, рік=%d, водотоннажність=%.1f т", getClass().getSimpleName(), name, year, displacement);
         }
     }
 
@@ -54,8 +53,7 @@ public class Main {
 
         @Override
         String toFileString() {
-            return String.join(";", name, String.valueOf(year),
-                    String.valueOf(displacement), String.valueOf(enginePower));
+            return String.join(";", name, String.valueOf(year), String.valueOf(displacement), String.valueOf(enginePower));
         }
 
         @Override
@@ -112,8 +110,7 @@ public class Main {
 
         @Override
         String toFileString() {
-            return String.join(";", name, String.valueOf(year),
-                    String.valueOf(displacement), String.valueOf(guns));
+            return String.join(";", name, String.valueOf(year), String.valueOf(displacement), String.valueOf(guns));
         }
 
         @Override
@@ -143,8 +140,7 @@ public class Main {
             line = line.trim();
             if (line.isEmpty()) continue;
             String[] p = line.split(";");
-            list.add(new Steamer(p[0].trim(), Integer.parseInt(p[1].trim()),
-                    Double.parseDouble(p[2].trim()), Double.parseDouble(p[3].trim())));
+            list.add(new Steamer(p[0].trim(), Integer.parseInt(p[1].trim()), Double.parseDouble(p[2].trim()), Double.parseDouble(p[3].trim())));
         }
         return list;
     }
@@ -155,8 +151,7 @@ public class Main {
             line = line.trim();
             if (line.isEmpty()) continue;
             String[] p = line.split(";");
-            list.add(new Sailboat(p[0].trim(), Integer.parseInt(p[1].trim()),
-                    Double.parseDouble(p[2].trim()), Integer.parseInt(p[3].trim())));
+            list.add(new Sailboat(p[0].trim(), Integer.parseInt(p[1].trim()), Double.parseDouble(p[2].trim()), Integer.parseInt(p[3].trim())));
         }
         return list;
     }
@@ -167,8 +162,7 @@ public class Main {
             line = line.trim();
             if (line.isEmpty()) continue;
             String[] p = line.split(";");
-            list.add(new Corvette(p[0].trim(), Integer.parseInt(p[1].trim()),
-                    Double.parseDouble(p[2].trim()), Integer.parseInt(p[3].trim())));
+            list.add(new Corvette(p[0].trim(), Integer.parseInt(p[1].trim()), Double.parseDouble(p[2].trim()), Integer.parseInt(p[3].trim())));
         }
         return list;
     }
